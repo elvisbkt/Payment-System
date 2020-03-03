@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="toolbar">
+    <label>
+      <input type="checkbox" id="sortable" /> sortable
+    </label>
+  </div>
+
+  <table id="table" data-toggle="table" data-toolbar=".toolbar" data-sortable="true" data-height="460" data-search="true"
+    class="full-width table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" data-checkbox="true">#</th>
+        <th scope="col" data-sortable="true">Patient Name</th>
+        <th scope="col" data-sortable="true">PhoneNumber</th>
+        <th scope="col" data-sortable="true">Date of Payment</th>
+        <th scope="col" data-sortable="true">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pat of patients; let i=index">
+        <th scope="row">{{i}}</th>
+        <td>{{pat.name}}</td>
+        <td>{{pat.pnumber}}</td>
+        <td>{{pat.date}}</td>
+        <td>{{pat.amount}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
